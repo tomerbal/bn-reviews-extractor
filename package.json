@@ -5,6 +5,7 @@
 	"main": "main.js",
 	"dependencies": {
 		"apify": "^0.13.3",
+		"cheerio": "^1.0.0-rc.3",
 		"requestretry": "^4.0.0"
 	},
 	"devDependencies": {},

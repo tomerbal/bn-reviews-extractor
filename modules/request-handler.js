@@ -54,7 +54,7 @@ class RequestHandler {
 
     getDomainBySiteId(siteId) {
         if (siteId === 101) {
-            return ".com";
+            return ".it";
         }
         if (siteId === 77) {
             return ".de";

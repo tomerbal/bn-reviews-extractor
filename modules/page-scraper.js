@@ -23,6 +23,7 @@ class PageScraper {
             timeout: 180000,
             maxAttempts: 10,
             retryDelay: 5000,
+            gzip: true,
             retryStrategy: myRetryStrategy
         };
         console.log("Crawling " + url);

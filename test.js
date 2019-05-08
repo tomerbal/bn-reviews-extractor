@@ -5,8 +5,8 @@ const pageScraper = new PageScraper();
 const productReviewsExtractor = new ProductReviewsExtractor(pageScraper);
 const requestHandler = new RequestHandler(pageScraper, productReviewsExtractor);
 
-const input = "https://www.ebay.co.uk/b/Narciso-Rodriguez-Womens-Fragrances/11848/bn_776014";
-requestHandler.handle(input, 3)
+const input = "https:\\\\www.ebay.de\\b\\bn_2397351";
+requestHandler.handle(input, 77)
     .then(function (output) {
         console.log(output);
     });

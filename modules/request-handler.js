@@ -34,6 +34,7 @@ class RequestHandler {
                     if (href.includes("/p/")) {
                         const epid = productTools.getEpidFromHref(href);
                         if (!productsFound.hasOwnProperty(epid) && self.reviewCount < appConfig.reviewsPerBn) {
+                            productsFound[epid] = {};
                             self.productReviewsExtractor.extract(epid, domain)
                                 .then(function (response) {
                                     self.reviewCount = self.reviewCount + response.length;
@@ -42,6 +43,8 @@ class RequestHandler {
                                         reviews: response
                                     }
                                 });
+                        } else {
+                            console.log("Found dup");
                         }
                     }
                 });

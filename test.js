@@ -5,7 +5,7 @@ const pageScraper = new PageScraper();
 const productReviewsExtractor = new ProductReviewsExtractor(pageScraper);
 const requestHandler = new RequestHandler(pageScraper, productReviewsExtractor);
 
-const input = "https:\\\\www.ebay.de\\b\\bn_680368";
+const input = "https:\\\\www.ebay.de\\b\\bn_55207293";
 requestHandler.handle(input, 77)
     .then(function (output) {
         console.log(output);
@@ -14,6 +14,6 @@ requestHandler.handle(input, 77)
 
 process.on('uncaughtException', err => {
     if (err.name === 'AssertionError') {
-        console.log("AssertionError");
+        console.warn("AssertionError");
     }
 });

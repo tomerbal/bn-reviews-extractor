@@ -5,7 +5,7 @@ const pageScraper = new PageScraper();
 const productReviewsExtractor = new ProductReviewsExtractor(pageScraper);
 const requestHandler = new RequestHandler(pageScraper, productReviewsExtractor);
 
-const input = "https:\\\\www.ebay.de\\b\\bn_2397351";
+const input = "https:\\\\www.ebay.de\\b\\bn_680368";
 requestHandler.handle(input, 77)
     .then(function (output) {
         console.log(output);

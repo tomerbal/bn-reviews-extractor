@@ -14,7 +14,8 @@ class RequestHandler {
     async handle(url, siteId) {
         const self = this;
         const productsFound = {};
-        const domain = self.getDomainBySiteId(siteId);
+        const domain = self.getDomainBySiteId(parseInt(siteId));
+        console.log("Domain: " + domain);
         let page = 1;
         let results;
         do {
@@ -53,6 +54,9 @@ class RequestHandler {
     }
 
     getDomainBySiteId(siteId) {
+        if (siteId === 0) {
+            return ".com";
+        }
         if (siteId === 101) {
             return ".it";
         }

@@ -8,7 +8,7 @@ const requestHandler = new RequestHandler(pageScraper, productReviewsExtractor);
 
 Apify.main(async () => {
     const input = await Apify.getInput();
-    console.log(`My test input: ${input.url}`);
+    console.log(`My test input: ${input.url} ${input.siteId}`);
     const output = await requestHandler.handle(input.url, input.siteId);
     await Apify.setValue('OUTPUT', output);
     console.log('Done.');
